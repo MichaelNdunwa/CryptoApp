@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/grey_bg">
+
+    <ImageView
+        android:id="@+id/crypto_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ethereum" />
+
+    <TextView
+        android:id="@+id/crypto_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Bitcoin"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/crypto_logo"
+        app:layout_constraintTop_toTopOf="@id/crypto_logo" />
+
+    <TextView
+        android:id="@+id/crypto_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$27,130"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/crypto_logo"
+        app:layout_constraintStart_toStartOf="@+id/crypto_name" />
+
+    <TextView
+        android:id="@+id/crypto_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="+2.35%"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/crypto_price"
+        app:layout_constraintStart_toEndOf="@id/crypto_price"
+        app:layout_constraintTop_toTopOf="@id/crypto_price" />
+
+
+    <com.majorik.sparklinelibrary.SparkLineLayout
+        android:id="@+id/spark_line_layout"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/crypto_size"
+        app:layout_constraintStart_toEndOf="@id/crypto_rate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:s_line_color="#fed32c"
+        app:s_line_thickness="2dp"
+        app:s_marker_background_color="#fed32c"
+        app:s_marker_width="8dp" />
+
+    <TextView
+        android:id="@+id/crypto_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="0.1812343BTC"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/crypto_name" />
+
+    <TextView
+        android:id="@+id/crypto_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$3,124.22"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/crypto_price"
+        app:layout_constraintEnd_toEndOf="@id/crypto_size" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
